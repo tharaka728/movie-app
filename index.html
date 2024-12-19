@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device=width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+    <!--swipper  css link-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+
+    <!--font awsome link-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+        padding: 20px 20px;
+    }
+    .no-results {
+  text-align: center;
+  color: #555;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.no-results p {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+#movie-grid .box:hover{
+    transform: translateY(-10px);
+}
+#favorites-grid .box:hover{
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+</style>
+
+   
+
+</head>
+<body>
+    <!--header section start-->
+  <section class="header">
+    <a href="home.php" class="logo">MOVIEHUB</a>
+    <nav class="navbar">
+      <a href="home.html">HOME</a>
+      <a href="about.html">OUR SCREENS</a>
+      <a href="package.html">SCHEDULE</a>
+      <a href="book.html">MOVIE LIBRARY</a>
+      <a href="">LOCATION & CONTACT</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </section>
+
+
+  <!--header section end-->
+
+  <!--slider section start-->
+  <section class="swiper home">
+    <div class="home-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide" style="background: url(images/banner3.jpg),no-repeat ;
+        ">
+          <div class="content">
+            <span>Unveil the Mystery – Watch Now</span>
+            <h3>Don't miss out on the film that</h3>
+            <a href="package.html" class="btn">Discover More</a>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide" style="background: url(images/back3.jpg)no-repeat;">
+          <div class="content">
+            <span>A Magical Adventure for All Ages</span>
+            <h3>Perfect for family movie night</h3>
+            <a href="#" class="btn">Discover More</a>
+          </div>
+        </div>
+
+        <div class="swiper-slide slide" style="background: url(images/movie-background-collage.jpg)no-repeat;">
+          <div class="content">
+            <span>Get Ready for the Blockbuster of the Year!</span>
+            <h3>The most anticipated movie of 2024</h3>
+            <a href="#" class="btn">Discover More</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+  </section>
+
+<!--slider section end-->
+
+<!--title section start-->
+ <section class="introduction">
+     <div class="title">
+        <div class="title-box" data-aos="fade-right" data-aos-duration="1000">
+            <h1>MovieHub</h1>
+        <p>MovieHub is your ultimate movie app, offering easy access
+           to an extensive library of films,trailers, reviews, and 
+           showtimes.Stay updated on new releases, explore genres, and get 
+           personalized recommendations with just a tap!</p>
+        </div>
+        
+     </div>
+
+
+ </section>
+
+
+
+<!--title section end-->
+
+<!--favorites section start-->
+<section class="favorites">
+    <div class="favorites-main">
+        <div class="favorites-search" id="movie-search">
+            <h3>Collect your Favourites</h3>
+            <input type="text" id="search-input"     placeholder=" Search title and add to grid"/>
+            
+        </div>
+        <div id="favorites-grid" class="box-container">
+            <!-- Dynamic movie items will be added here -->
+             <h1 style="color: white; font-size: 2em;" >Favourites</h2>
+          </div>
+    
+        
+       <div class="box-container" id="movie-grid">
+        <div class="box" data-aos="fade-right" data-aos-duration="1000">
+            <div class="image">
+                <img src="images/batman.jpeg"/>
+                <button class="close-btn">✖</button>
+            </div>
+
+            <div class="content">
+                <h3>Batman Returns</h3>
+                <P>Experience the vibrant city of Singapore, known for its futuristic architecture, lush gardens, and diverse culture. </P>
+               
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-duration="1000">
+            <div class="image">
+                <img src="images/horse.jpeg"/>
+                <button class="close-btn">✖</button>
+            </div>
+
+            <div class="content">
+                <h3>Wild Wild West</h3>
+                <P>Experience the vibrant city of Singapore, known for its futuristic architecture, lush gardens, and diverse culture. </P>
+               
+            </div>
+        </div>
+
+
+        <div class="box" data-aos="fade-left" data-aos-duration="1000">
+            <div class="image">
+                <img src="images/spiderman.jpeg"/>
+                <button class="close-btn">✖</button>
+            </div>
+
+            <div class="content">
+                <h3>The Amazing Spiderman</h3>
+                <P>Experience the vibrant city of Singapore, known for its futuristic architecture, lush gardens, and diverse culture. </P>
+               
+            </div>
+        </div>
+        
+       </div>
+       
+
+    </div>
+
+
+</section>
+
+
+<!--favorites section end-->
+
+
+
+<!--contact us section start-->
+<section class="contact-us">
+   
+        <div class="contact-form" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>How to reach Us</h2>
+        <P>lorum ipsum lorium ipsum</P>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="input-box">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+            </div>
+            <button type="submit" onclick="validate(event);">SUBMIT</button>
+        </form>
+        
+    </div>
+
+    <div class="map-section" data-aos="zoom-in" data-aos-duration="1000">
+       
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3812075643614!2d79.9404323!3d6.844821199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1734436573864!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+    </div>
+</section>
+
+<!--footer section start-->
+<section class="footer">
+    
+        <div class="footer-container">
+            <!-- Left Content: Address -->
+            <div class="footer-left">
+                <h3>IT Group</h3>
+                <p>C. Salvador de Madariaga, 1<br>
+                28027 Madrid<br>
+                Spain</p>
+            </div>
+
+            <!-- Right Content: Social Media -->
+            <div class="footer-right">
+                <p>Follow us on</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+           
+
+        <!-- Bottom Content -->
+        <div class="footer-bottom">
+            <div>  <p>&copy; Copyright © 2022 IT Hotel S. All rights reserved.</p></div>
+            <div>  <p>Photos by <a href="#">Felix Mooneeram</a> & <a href="#">Serge Kutuzov</a> on <a href="#">Unsplash</a></p></div>
+          
+
+          
+        </div>
+    
+
+
+</section>
+
+
+    
+  <!--footer section end-->
+
+ <!--swiper js file-->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <!--custom js file-->
+ <script src="js/script.js"></script>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+ AOS.init();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+// Client-side validation and AJAX submission
+function validate(event) {
+    var isValid = true;
+    var errorMessage = '';
+
+    // Clear previous error messages
+    $('.error').remove();
+
+    // Validate First Name
+    var firstName = $('#first-name').val();
+    if (!firstName) {
+        isValid = false;
+        $('#first-name').after('<span class="error">First Name is required.</span>');
+    }
+
+    // Validate Last Name
+    var lastName = $('#last-name').val();
+    if (!lastName) {
+        isValid = false;
+        $('#last-name').after('<span class="error">Last Name is required.</span>');
+    }
+
+    // Validate Email
+    var email = $('#email').val();
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email || !emailPattern.test(email)) {
+        isValid = false;
+        $('#email').after('<span class="error">Please enter a valid email address.</span>');
+    }
+
+    // Validate Telephone (10-digit number)
+    var telephone = $('#telephone').val();
+    var telephonePattern = /^[0-9]{10}$/;  // Only 10 digits
+    if (telephone && !telephonePattern.test(telephone)) {
+        isValid = false;
+        $('#telephone').after('<span class="error">Please enter a valid 10-digit telephone number.</span>');
+    }
+
+    // Validate Terms & Conditions
+    var termsChecked = $('#terms').prop('checked');
+    if (!termsChecked) {
+        isValid = false;
+        $('#terms').after('<span class="error">You must agree to the Terms & Conditions.</span>');
+    }
+
+    // If valid, send the form data via AJAX
+    if (isValid) {
+        var formData = $('#contactForm').serialize();
+        $.ajax({
+    url: 'validate_Process.php',
+    type: 'POST',
+    data: formData,
+    success: function(response) {
+        // Handle success response
+        if (response.trim() === 'success') {
+            alert('Form submitted successfully!');
+            
+            // Clear the form
+            $('#contactForm')[0].reset();
+        } else {
+            alert('Error: ' + response);
+        }
+    },
+    error: function(xhr, status, error) {
+        // Handle error response
+        alert('There was an error submitting the form: ' + error);
+        console.log('XHR:', xhr);
+        console.log('Status:', status);
+        console.log('Error:', error);
+    }
+});
+
+
+    } else {
+        // If invalid, display error messages
+        alert('Please correct the errors!');
+    }
+
+    // Prevent the form from submitting if there are errors
+    event.preventDefault();
+}
+</script>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
