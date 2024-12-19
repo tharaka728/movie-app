@@ -2,7 +2,7 @@
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Admin email addresses
-$admin_emails = ['algomaksolutions@gmail.com', 'tsandaruwan375@gmail.com'];
+$admin_emails = ['prabhath.senadheera@ebeyonds.com', 'dumidu.kodithuwakku@ebeyonds.com '];
 
 // File path to save the JSON data
 $file_path = 'data.json';
@@ -23,13 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Validate email format
+    
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email address.";
         exit;
     }
 
-    // Validate terms agreement
+    
     if (!$terms) {
         echo "You must agree to the terms.";
         exit;
@@ -104,7 +104,7 @@ function sendEmails($first_name, $last_name, $email, $telephone, $message, $admi
     // Send admin notification email
     $admin_email = new \Brevo\Client\Model\SendSmtpEmail([
         'subject' => 'New Form Submission',
-        'sender' => ['name' => 'cinehub', 'email' => 'tharakaonline28@gmail.com'],
+        'sender' => ['name' => 'moviehub', 'email' => 'tharakaonline28@gmail.com'],
         'to' => array_map(fn($admin_email) => ['email' => $admin_email], $admin_emails),
         'htmlContent' => $admin_email_content,
     ]);
